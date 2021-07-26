@@ -1,24 +1,9 @@
 # Arduino-cli-setup
 
-  Download the pre-built binary for your supported platform
+  Download the pre-built binaries for your supported platform
   
   Extract the downloaded file to a directory already in your path or add the Arduino CLI installation path to your PATH environment variable.
-  
-  # To add to the path on a Mac OS:
-  
-   Open your Terminal.
-   
-   Run the command:              
-   
-    sudo nano /etc/paths
-   
-   Enter your password, when required.
-   
-   Go to the bottom of the file, and enter the path you wish to add.
-   
-   Hit control-x to quit.
-   
-   Enter "Y" to save the modified buffer.
+ 
   
   # Use the install scripts
    The script requires sh. This is always available on Linux and macOS. sh is not available by default on Windows. The script may be run on Windows by installing    Git for Windows, then running it from Git Bash.
@@ -37,20 +22,65 @@
    
      curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh -s 0.9.0
      
-   Run the code to see if you have successfully installed the script
+  # To add to the path on a Mac OS:
+  
+   Open your Terminal.
    
-     arduino-cli help core
+   Run the command:              
+   
+    sudo nano /etc/paths
+   
+   Enter your password, when required.
+   
+   Go to the bottom of the file, and enter the path you wish to add.
+   
+   Hit control-x to quit.
+   
+   Enter "Y" to save the modified buffer.
+  
+  
+   Open new window and run the code to see if you have successfully installed the script
+   
+      arduino-cli help core
+     
+     
+     Arduino core operations.
+
+     Usage:
+       arduino-cli core [command]
+
+    Examples:
+      arduino-cli core update-index
+
+    Available Commands:
+     download     Downloads one or more cores and corresponding tool dependencies.
+     install      Installs one or more cores and corresponding tool dependencies.
+     list         Shows the list of installed platforms.
+     search       Search for a core in Boards Manager.
+     uninstall    Uninstalls one or more cores and corresponding tool dependencies if no longer used.
+     update-index Updates the index of cores.
+     upgrade      Upgrades one or all installed platforms to the latest version.
+
+    Flags:
+      -h, --help   help for core
+
+    Global Flags:
+      --additional-urls strings   Comma-separated list of additional URLs for the Boards Manager.
+      --config-file string        The custom config file (if not specified the default will be used).
+      --format string             The output format, can be {text|json}. (default "text")
+      --log-file string           Path to the file where logs will be written.
+      --log-format string         The output format for the logs, can be {text|json}.
+      --log-level string          Messages with this level and above will be logged. Valid levels are: trace, debug, info, warn, error, fatal, panic
+     -v, --verbose                   Print the logs on the standard output.
+
+    Use "arduino-cli core [command] --help" for more information about a command.
+     
      
    # Connect the board to your PC
-   
-   The first thing to do upon a fresh install is to update the local cache of available platforms and libraries by running:
-   
-     $ arduino-cli core update-index
-   Updating index: package_index.json downloaded
-   
+    
    After connecting the board to your PC by using the USB cable, you should be able to check whether it's been recognized by running:
    
-     $ arduino-cli board list
+      arduino-cli board list
     
       Port                  Type                Board Name               FQBN                               Core
      /dev/cu.usbmodem14101  Serial Port(USB)    Seeeduino Wio Terminal   Seeeduino:samd:seeed_wio_terminal  Seeeduino:samd
@@ -66,10 +96,80 @@
    
      arduino-cli core install Seeeduino:samd
      
-   To see if you have successfully downloaded the board, run the following code and see if you can get details about your board
-   
+   To check again if you have successfully downloaded the board, run the following code
      arduino-cli board list
      
+        Port                  Type                Board Name               FQBN                               Core
+     /dev/cu.usbmodem13201  Serial Port(USB)    Seeeduino Wio Terminal   Seeeduino:samd:seeed_wio_terminal  Seeeduino:samd
+  
+  
+# Create a new sketch
+
+ To create a new sketch named MyFirstSketch in the current directory, run the following command:
+
+    arduino-cli sketch new MyFirstSketch
+    Sketch created in: /Users/anmolbaruwal/MyFirstSketch
+    
+ A sketch is a folder containing assets like source files and libraries; the new command creates for you a .ino file called MyFirstSketch.ino containing Arduino boilerplate code:
  
+Change the directory to your new sketch
   
+    cd MyFirstSketch 
+    
+Run the foollowing code to make an arduino file
+
+
+    ls
+    
+Run the command to make the setup for your program.
+
+    cat MyFirstSketch.ino
+    
+   
+      void setup() {
+    }
+
+     void loop() {
+    }
+
+To edit the setup for your program in terminal.
+
+  Run:
   
+    nano MyFirstSketch.ino
+  
+  And change the code similar to this
+  
+       void setup() {
+        pinMode(LED_BUILTIN, OUTPUT);
+    }
+
+       void loop() {
+         digitalWrite(LED_BUILTIN, HIGH);
+         delay(1000);
+         digitalWrite(LED_BUILTIN, LOW);
+         delay(1000);
+    }
+    
+    
+  Save and exit from the steup
+  
+  # Compile and upload sketch
+  
+  To compile the sketch you run the compile command, passing the proper FQBN string:
+
+      arduino-cli compile -b Seeeduino:samd:seeed_wio_terminal -v
+      
+ You can get your board's FQBN by running the code:
+ 
+ 
+     arduino-cli board list
+     
+     
+ To upload the sketch to your board, run the following command, using the serial port your board is connected to:    
+
+    arduino-cli upload -b Seeeduino:samd:seeed_wio_terminal -p /dev/cu.usbmodem13201  -v
+    
+    
+    
+
