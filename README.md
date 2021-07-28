@@ -97,8 +97,6 @@
    Run the code to install the particular board in your PC
    
    Here I am installing Seeeduino Wio board
-  
-   Run the code to install the particular board in your PC
    
      arduino-cli core install Seeeduino:samd
      
