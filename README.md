@@ -24,19 +24,19 @@
      
   # To add to the path on a Mac OS:
   
-   Open your Terminal.
+   1.Open your Terminal.
    
-   Run the command:              
+   2.Run the command:              
    
     sudo nano /etc/paths
    
-   Enter your password, when required.
+   3.Enter your password, when required.
    
-   Go to the bottom of the file, and enter the path you wish to add.
+   4.Go to the bottom of the file, and enter the path you wish to add.
    
-   Hit control-x to quit.
+   5.Hit control-x to quit.
    
-   Enter "Y" to save the modified buffer.
+   6.Enter "Y" to save the modified buffer.
   
   
    Open new window and run the code to see if you have successfully installed the script
@@ -91,12 +91,18 @@
    
     arduino-cli core update-index --additional-urls https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
     
+  If you using any other board, change the url with your board's url.
+    
    
+   Run the code to install the particular board in your PC
+   
+   Here I am installing Seeeduino Wio board
+  
    Run the code to install the particular board in your PC
    
      arduino-cli core install Seeeduino:samd
      
-   To check again if you have successfully downloaded the board, run the following code
+   To check again if you have successfully installed the board, run the following code
      arduino-cli board list
      
         Port                  Type                Board Name               FQBN                               Core
