@@ -84,6 +84,11 @@
     
       Port                  Type                Board Name               FQBN                               Core
      /dev/cu.usbmodem14101  Serial Port(USB)    Seeeduino Wio Terminal   Seeeduino:samd:seeed_wio_terminal  Seeeduino:samd
+     
+     
+   Download the platform indexes by running the command:
+   
+        arduino-cli core update-index
    
    If you see an Unknown board listed, uploading should still work as long as you identify the platform core and use the correct FQBN string. When a board is not detected for whatever reason,try downloading and installing the board in your PC.
    
