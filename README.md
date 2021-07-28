@@ -24,19 +24,19 @@
      
   # To add to the path on a Mac OS:
   
-   1.Open your Terminal.
+   1. Open your Terminal.
    
-   2.Run the command:              
+   2. Run the command:              
    
     sudo nano /etc/paths
    
-   3.Enter your password, when required.
+   3. Enter your password, when required.
    
-   4.Go to the bottom of the file, and enter the path you wish to add.
+   4. Go to the bottom of the file, and enter the path you wish to add.
    
-   5.Hit control-x to quit.
+   5. Hit control-x to quit.
    
-   6.Enter "Y" to save the modified buffer.
+   6. Enter "Y" to save the modified buffer.
   
   
    Open new window and run the code to see if you have successfully installed the script
