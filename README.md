@@ -117,7 +117,7 @@
  To create a new sketch named MyFirstSketch in the current directory, run the following command:
 
     arduino-cli sketch new MyFirstSketch
-    Sketch created in: /Users/anmolbaruwal/MyFirstSketch
+    Sketch created in: /Users/anmol/MyFirstSketch
     
  A sketch is a folder containing assets like source files and libraries; the new command creates for you a .ino file called MyFirstSketch.ino containing Arduino boilerplate code:
  
@@ -167,7 +167,7 @@ To edit the setup for your program in terminal.
   
   To compile the sketch you run the compile command, passing the proper FQBN string:
 
-      arduino-cli compile -b Seeeduino:samd:seeed_wio_terminal -v
+      arduino-cli compile -b Seeeduino:samd:seeed_wio_terminal MyFirstSketch -v
       
  You can get your board's FQBN by running the code:
  
@@ -177,8 +177,179 @@ To edit the setup for your program in terminal.
      
  To upload the sketch to your board, run the following command, using the serial port your board is connected to:    
 
-    arduino-cli upload -b Seeeduino:samd:seeed_wio_terminal -p /dev/cu.usbmodem13201  -v
-    
+    arduino-cli upload -b Seeeduino:samd:seeed_wio_terminal -p /dev/cu.usbmodem13201 MyFirstSketch -v
+     
+ You can upload any .ino file by just writing the file name without extension after mentioning the serial port as shown above.
+ 
+ # Add libraries
+ 
+ If you need to add more functionalities to your sketch, chances are some of the libraries available in the Arduino ecosystem already provide what you need. For example, if you need a light sensor, you can try searching for the light sensor keyword:
+ 
+      arduino-cli lib search light sensor
+      
+      Name: "Adafruit APDS9960 Library"
+       Author: Adafruit
+       Maintainer: Adafruit <info@adafruit.com>
+       Sentence: This is a library for the Adafruit APDS9960 gesture/proximity/color/light sensor.
+       Paragraph: This is a library for the Adafruit APDS9960 gesture/proximity/color/light sensor.
+       Website: https://github.com/adafruit/Adafruit_APDS9960
+       Category: Sensors
+       Architecture: *
+       Types: Contributed
+       Versions: [1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.1.0, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5].   
+      Name: "Adafruit AS726X"
+       Author: Adafruit
+       Maintainer: Adafruit <info@adafruit.com>
+       Sentence: Adafruit Channel Visible Light / Color Sensor Breakout
+       Paragraph: Adafruit Channel Visible Light / Color Sensor Breakout
+       Website: https://github.com/adafruit/Adafruit_AS726x
+       Category: Sensors
+       Architecture: *
+       Types: Contributed
+       Versions: [1.0.2, 1.0.3]
+       Dependencies: Adafruit ST7735 and ST7789 Library, Adafruit GFX Library
+      Name: "Adafruit TSL2591 Library"
+       Author: Adafruit
+       Maintainer: Adafruit <info@adafruit.com>
+       Sentence: Library for the TSL2591 digital luminosity (light) sensors.
+       Paragraph: Library for the TSL2591 digital luminosity (light) sensors.
+       Website: https://github.com/adafruit/Adafruit_TSL2591_Library
+       Category: Sensors
+       Architecture: *
+       Types: Recommended
+       Versions: [1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.1.0, 1.1.1, 1.1.2, 1.2.0, 1.2.1, 1.3.0, 1.3.1]
+       Dependencies: Adafruit Unified Sensor
+      Name: "Adafruit_VL53L0X"
+       Author: Adafruit
+       Maintainer: adafruit <support@adafruit.com>
+       Sentence: Sensor driver for VL53L0X Time of Flight sensor
+       Paragraph: Sensor driver for VL53L0X Time of Flight sensor
+       Website: https://github.com/adafruit/Adafruit_VL53L0X
+       Category: Sensors
+       Architecture: *
+       Types: Contributed
+       Versions: [1.0.0, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.0.7, 1.0.8, 1.0.9, 1.0.10, 1.1.0, 1.1.1]
+       Dependencies: Adafruit SSD1306, Adafruit GFX Library
+      Name: "Adafruit_VL6180X"
+       Author: Adafruit
+       Maintainer: adafruit <support@adafruit.com>
+       Sentence: Sensor driver for VL6180X Time of Flight sensor
+       Paragraph: Sensor driver for VL6180X Time of Flight sensor
+       Website: https://github.com/adafruit/Adafruit_VL6180X
+       Category: Sensors
+       Architecture: *
+       Types: Contributed
+       Versions: [1.0.0, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.0.7, 1.0.8, 1.1.0, 1.2.0]
+       Dependencies: Adafruit SSD1306, Adafruit GFX Library
+      Name: "Arduino_MKRENV"
+       Author: Arduino
+       Maintainer: Arduino <info@arduino.cc>
+       Sentence: Allows you to read the temperature, humidity, pressure, light and UV sensors of your MKR ENV shield.
+       Paragraph:
+       Website: http://github.com/arduino-libraries/Arduino_MKRENV
+       Category: Sensors
+       Architecture: samd
+       Types: Arduino
+       Versions: [1.0.0, 1.1.0, 1.2.0]
+       Provides includes: Arduino_MKRENV.h
+      Name: "BH1730"
+       Author: Janco Kock
+       Maintainer: Janco Kock
+       Sentence: An easy to use library for reading light values from the BH1730 light sensor
+       Paragraph: An easy to use library for reading light values from the BH1730 light sensor
+       Website: https://github.com/jancoow/BH1730-Library
+       Category: Sensors
+       Architecture: *
+       Types: Contributed
+       Versions: [1.0.0]
+      Name: "BH1750"
+       Author: Christopher Laws
+       Maintainer: Christopher Laws
+       Sentence: Arduino library for the digital light sensor breakout boards containing the BH1750FVI IC
+       Paragraph: Pretty simple and robust BH1750 library. Arduino, ESP8266 & ESP32 compatible.
+       Website: https://github.com/claws/BH1750
+       Category: Sensors
+       Architecture: avr, sam, esp8266, esp32, stm32
+       Types: Contributed
+       Versions: [1.1.4, 1.2.0]
+       Provides includes: BH1750.h
+      Name: "BH1750FVI"
+       Author: PeterEmbedded
+       Maintainer: PeterEmbedded <@PeterEmbedded>
+       Sentence: Enables reading the digital light sensor
+       Paragraph: Enables reading the digital light sensor BH1750FVI
+       Website: https://github.com/PeterEmbedded/BH1750FVI
+       Category: Sensors
+       Architecture: *
+       Types: Contributed
+       Versions: [1.0.0, 1.1.0, 1.1.1]
+       
+ Let's install one of the library,
+ 
+       arduino-cli lib install BH1750
+       
+       Downloading BH1730@1.0.0...
+       BH1730@1.0.0 downloaded
+       Installing BH1730@1.0.0...
+       Installed BH1730@1.0.0
+       
+ Similarly, if you want to install particular library using Git hub link, you can following these steps
+ 
+  At first, you will need to enable the unsafe install of the library which is set as false by default.
+  
+        arduino-cli config init --overwrite
+        
+        Config file written to: /Users/anmol/Library/Arduino15/arduino-cli.yaml
+        
+  You will get the location of config file
+  
+ Now, we need to edit the config file and change enable the unsafe install of libraries.
+ 
+         nano /Users/anmol/Library/Arduino15/arduino-cli.yaml
+         
+         board_manager:
+         additional_urls: []
+         daemon:
+         port: "50051"
+         directories:
+         data: /Users/anmolbaruwal/Library/Arduino15
+         downloads: /Users/anmolbaruwal/Library/Arduino15/staging
+         user: /Users/anmolbaruwal/Documents/Arduino
+         library:
+         enable_unsafe_install: false
+         logging:
+         file: ""
+         format: text
+         level: info
+         metrics:
+         addr: :9090
+         enabled: true
+         sketch:
+         always_export_binaries: false
+         
+         
+Edit the enable_unsafe_install by setting it as true
+ 
+Hit control-x to quit.
+   
+Enter "Y" to save the modified buffer.
+
+Let's install our servo library using Git bhub link by running following command
+
+       arduino-cli lib install --git-url https://github.com/PaintYourDragon/Servo.git
+
+       Enumerating objects: 83, done.
+       Counting objects: 100% (83/83), done.
+       Compressing objects: 100% (57/57), done.
+       Total 83 (delta 31), reused 60 (delta 20), pack-reused 0
+       Installed Library from Git URL
+
+
+ 
+ 
+ 
+ 
+ 
     
     
 
