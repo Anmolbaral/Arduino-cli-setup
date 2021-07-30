@@ -303,7 +303,7 @@ To edit the setup for your program in terminal.
         
   You will get the location of config file.
   
- Now, we need to edit the config file and change enable the unsafe install of libraries.
+ Now, we need to edit the config file.
  
          nano /Users/anmol/Library/Arduino15/arduino-cli.yaml
          
