@@ -312,9 +312,9 @@ To edit the setup for your program in terminal.
          daemon:
          port: "50051"
          directories:
-         data: /Users/anmolbaruwal/Library/Arduino15
-         downloads: /Users/anmolbaruwal/Library/Arduino15/staging
-         user: /Users/anmolbaruwal/Documents/Arduino
+         data: /Users/anmol/Library/Arduino15
+         downloads: /Users/anmol/Library/Arduino15/staging
+         user: /Users/anmol/Documents/Arduino
          library:
          enable_unsafe_install: false
          logging:
