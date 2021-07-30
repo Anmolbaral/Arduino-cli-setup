@@ -334,7 +334,7 @@ Hit control-x to quit.
    
 Enter "Y" to save the modified buffer.
 
-Let's install our servo library using Git bhub link by running following command
+Let's install our servo library using Github link by running following command
 
        arduino-cli lib install --git-url https://github.com/PaintYourDragon/Servo.git
 
