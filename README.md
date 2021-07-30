@@ -284,7 +284,7 @@ To edit the setup for your program in terminal.
        Types: Contributed
        Versions: [1.0.0, 1.1.0, 1.1.1]
        
- Let's install one of the library,
+ Let's install one of the libraries,
  
        arduino-cli lib install BH1750
        
@@ -293,7 +293,7 @@ To edit the setup for your program in terminal.
        Installing BH1730@1.0.0...
        Installed BH1730@1.0.0
        
- Similarly, if you want to install particular library using Git hub link, you can following these steps
+ Similarly, if you want to install particular library using Git hub link, you can following these steps.
  
   At first, you will need to enable the unsafe install of the library which is set as false by default.
   
@@ -301,7 +301,7 @@ To edit the setup for your program in terminal.
         
         Config file written to: /Users/anmol/Library/Arduino15/arduino-cli.yaml
         
-  You will get the location of config file
+  You will get the location of config file.
   
  Now, we need to edit the config file and change enable the unsafe install of libraries.
  
