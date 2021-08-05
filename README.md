@@ -196,29 +196,7 @@ To edit the setup for your program in terminal.
        Category: Sensors
        Architecture: *
        Types: Contributed
-       Versions: [1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.1.0, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5].  
-      Name: "Adafruit_VL6180X"
-       Author: Adafruit
-       Maintainer: adafruit <support@adafruit.com>
-       Sentence: Sensor driver for VL6180X Time of Flight sensor
-       Paragraph: Sensor driver for VL6180X Time of Flight sensor
-       Website: https://github.com/adafruit/Adafruit_VL6180X
-       Category: Sensors
-       Architecture: *
-       Types: Contributed
-       Versions: [1.0.0, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.0.7, 1.0.8, 1.1.0, 1.2.0]
-       Dependencies: Adafruit SSD1306, Adafruit GFX Library
-      Name: "Arduino_MKRENV"
-       Author: Arduino
-       Maintainer: Arduino <info@arduino.cc>
-       Sentence: Allows you to read the temperature, humidity, pressure, light and UV sensors of your MKR ENV shield.
-       Paragraph:
-       Website: http://github.com/arduino-libraries/Arduino_MKRENV
-       Category: Sensors
-       Architecture: samd
-       Types: Arduino
-       Versions: [1.0.0, 1.1.0, 1.2.0]
-       Provides includes: Arduino_MKRENV.h
+       Versions: [1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.1.0, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5].
       Name: "BH1730"
        Author: Janco Kock
        Maintainer: Janco Kock
