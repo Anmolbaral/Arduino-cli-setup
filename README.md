@@ -196,40 +196,7 @@ To edit the setup for your program in terminal.
        Category: Sensors
        Architecture: *
        Types: Contributed
-       Versions: [1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.1.0, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5].   
-      Name: "Adafruit AS726X"
-       Author: Adafruit
-       Maintainer: Adafruit <info@adafruit.com>
-       Sentence: Adafruit Channel Visible Light / Color Sensor Breakout
-       Paragraph: Adafruit Channel Visible Light / Color Sensor Breakout
-       Website: https://github.com/adafruit/Adafruit_AS726x
-       Category: Sensors
-       Architecture: *
-       Types: Contributed
-       Versions: [1.0.2, 1.0.3]
-       Dependencies: Adafruit ST7735 and ST7789 Library, Adafruit GFX Library
-      Name: "Adafruit TSL2591 Library"
-       Author: Adafruit
-       Maintainer: Adafruit <info@adafruit.com>
-       Sentence: Library for the TSL2591 digital luminosity (light) sensors.
-       Paragraph: Library for the TSL2591 digital luminosity (light) sensors.
-       Website: https://github.com/adafruit/Adafruit_TSL2591_Library
-       Category: Sensors
-       Architecture: *
-       Types: Recommended
-       Versions: [1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.1.0, 1.1.1, 1.1.2, 1.2.0, 1.2.1, 1.3.0, 1.3.1]
-       Dependencies: Adafruit Unified Sensor
-      Name: "Adafruit_VL53L0X"
-       Author: Adafruit
-       Maintainer: adafruit <support@adafruit.com>
-       Sentence: Sensor driver for VL53L0X Time of Flight sensor
-       Paragraph: Sensor driver for VL53L0X Time of Flight sensor
-       Website: https://github.com/adafruit/Adafruit_VL53L0X
-       Category: Sensors
-       Architecture: *
-       Types: Contributed
-       Versions: [1.0.0, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.0.7, 1.0.8, 1.0.9, 1.0.10, 1.1.0, 1.1.1]
-       Dependencies: Adafruit SSD1306, Adafruit GFX Library
+       Versions: [1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 1.0.6, 1.1.0, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5].  
       Name: "Adafruit_VL6180X"
        Author: Adafruit
        Maintainer: adafruit <support@adafruit.com>
@@ -273,16 +240,7 @@ To edit the setup for your program in terminal.
        Types: Contributed
        Versions: [1.1.4, 1.2.0]
        Provides includes: BH1750.h
-      Name: "BH1750FVI"
-       Author: PeterEmbedded
-       Maintainer: PeterEmbedded <@PeterEmbedded>
-       Sentence: Enables reading the digital light sensor
-       Paragraph: Enables reading the digital light sensor BH1750FVI
-       Website: https://github.com/PeterEmbedded/BH1750FVI
-       Category: Sensors
-       Architecture: *
-       Types: Contributed
-       Versions: [1.0.0, 1.1.0, 1.1.1]
+     
        
  Let's install one of the libraries,
  
